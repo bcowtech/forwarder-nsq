@@ -1,6 +1,15 @@
 package nsq
 
-import "github.com/nsqio/go-nsq"
+import (
+	"log"
+	"os"
+
+	"github.com/nsqio/go-nsq"
+)
+
+var (
+	defaultLogger = log.New(os.Stdout, "[bcow-go/forwarder-nsq]", log.LstdFlags|log.Lmicroseconds|log.Llongfile|log.Lmsgprefix)
+)
 
 type (
 	Producer = nsq.Producer
@@ -13,6 +22,7 @@ func NewConfig() *Config {
 
 type Forwarder struct {
 	producer *Producer
+	logger   *log.Logger
 }
 
 func NewForwarder(option *Option) *Forwarder {
@@ -23,6 +33,7 @@ func NewForwarder(option *Option) *Forwarder {
 
 	return &Forwarder{
 		producer: p,
+		logger:   defaultLogger,
 	}
 }
 
@@ -36,4 +47,10 @@ func (f *Forwarder) Close() {
 	p := f.producer
 
 	defer p.Stop()
+}
+
+func (f *Forwarder) Runner() *Runner {
+	return &Runner{
+		forwarder: f,
+	}
 }
