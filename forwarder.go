@@ -3,6 +3,7 @@ package nsq
 import (
 	"log"
 	"os"
+	"time"
 
 	"github.com/nsqio/go-nsq"
 )
@@ -41,6 +42,12 @@ func (f *Forwarder) Write(topic string, body []byte) error {
 	p := f.producer
 
 	return p.Publish(topic, body)
+}
+
+func (f *Forwarder) DeferredWrite(topic string, delay time.Duration, body []byte) error {
+	p := f.producer
+
+	return p.DeferredPublish(topic, delay, body)
 }
 
 func (f *Forwarder) Close() {
