@@ -5,12 +5,12 @@ type Runner struct {
 }
 
 func (r *Runner) Start() {
-	r.forwarder.logger.Printf("[bcow-go/forwarder-nsq] Started\n")
+	r.forwarder.logger.Printf("[bcowtech/forwarder-nsq] Started\n")
 }
 
 func (r *Runner) Stop() {
 	logger := r.forwarder.logger
-	logger.Printf("[bcow-go/forwarder-nsq] Closing\n")
+	logger.Printf("[bcowtech/forwarder-nsq] Closing\n")
 	r.forwarder.Close()
-	logger.Printf("[bcow-go/forwarder-nsq] Closed\n")
+	logger.Printf("[bcowtech/forwarder-nsq] Closed\n")
 }

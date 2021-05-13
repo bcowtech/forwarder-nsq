@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	defaultLogger = log.New(os.Stdout, "[bcow-go/forwarder-nsq]", log.LstdFlags|log.Lmicroseconds|log.Llongfile|log.Lmsgprefix)
+	defaultLogger = log.New(os.Stdout, "[bcowtech/forwarder-nsq]", log.LstdFlags|log.Lmicroseconds|log.Llongfile|log.Lmsgprefix)
 )
 
 type (

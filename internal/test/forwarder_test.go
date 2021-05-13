@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	nsq "gitlab.bcowtech.de/bcow-go/forwarder-nsq"
+	nsq "github.com/bcowtech/forwarder-nsq"
 )
 
 var (
