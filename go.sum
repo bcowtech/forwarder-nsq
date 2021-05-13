@@ -1,5 +1,3 @@
-github.com/bcowtech/forwarder-nsq v1.2.0 h1:cBtkjJ1Ix9sOaPJmNA8S/oEyVO53T7mFrFh5a2vS1Sg=
-github.com/bcowtech/forwarder-nsq v1.2.0/go.mod h1:eTJRfrdePtph2nyyqjWr1DjWQqISXxjl0MeBK3M7tbs=
 github.com/golang/snappy v0.0.1 h1:Qgr9rKW7uDUkrbSmQeiDsGa8SjGyCOGtuasMWwvp2P4=
 github.com/golang/snappy v0.0.1/go.mod h1:/XxbfmMg8lxefKM7IXC3fBNl/7bRcc72aCRzEWrmP2Q=
 github.com/nsqio/go-nsq v1.0.8 h1:3L2F8tNLlwXXlp2slDUrUWSBn2O3nMh8R1/KEDFTHPk=
